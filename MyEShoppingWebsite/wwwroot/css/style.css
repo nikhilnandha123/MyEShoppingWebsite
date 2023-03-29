@@ -1,0 +1,17 @@
+.wrapper {
+    position: fixed;
+    width: 268px;
+    overflow-y: scroll;
+    top: 0;
+    bottom: 0;
+}
+
+aside {
+    background-image: url("../dist/img/photo1.png");
+}
+
+@media (min-width: 1025px) {
+    .h-custom {
+        height: 100vh !important;
+    }
+}
