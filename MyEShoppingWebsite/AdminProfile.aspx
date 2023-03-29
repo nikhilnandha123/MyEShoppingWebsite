@@ -9,31 +9,29 @@
                 <div class="card-body bg-dark text-white">
                     <div class="container-fluid">
                         <div id="msg"></div>
-                        <form>
-                            <div class="form-group">
-                                <label for="name">Username</label>
-                                <asp:TextBox ID="txtusername" type="text" class="form-control bg-white" runat="server" value=""></asp:TextBox>
-                            </div>
-                            <div class="form-group mt-2">
-                                <label for="name">Password</label>
-                                <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white" runat="server" value=""></asp:TextBox>
-                            </div>
-                            <div class="form-group mt-2">
-                                <label for="name">Email</label>
-                                <input type="email" name="email" id="email" class="form-control bg-white" value="" required>
-                            </div>
-                            <div class="form-group mt-2">
-                                <label for="password">Password</label>
-                                <input type="password" name="password" id="password" class="form-control bg-white" value="" autocomplete="off">
-                            </div>
-                            <div class="form-group mt-2">
-                                <label for="name">Role</label>
-                                <input type="text" name="role" id="role" class="form-control bg-white" value="" required>
-                            </div>
-                            <div class="d-grid mt-5">
-                                <button class="btn btn-sm btn-primary">Update</button>
-                            </div>
-                        </form>
+                        <div class="form-group">
+                            <label for="name">Username</label>
+                            <asp:TextBox ID="txtusername" type="text" class="form-control bg-white" runat="server" value=""></asp:TextBox>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="name">Password</label>
+                            <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white" runat="server" value=""></asp:TextBox>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="name">Email</label>
+                            <input type="email" name="email" id="email" class="form-control bg-white" value="" required>
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="password">Password</label>
+                            <input type="password" name="password" id="password" class="form-control bg-white" value="" autocomplete="off">
+                        </div>
+                        <div class="form-group mt-2">
+                            <label for="name">Role</label>
+                            <input type="text" name="role" id="role" class="form-control bg-white" value="" required>
+                        </div>
+                        <div class="d-grid mt-5">
+                            <button class="btn btn-sm btn-primary">Update</button>
+                        </div>
                     </div>
                 </div>
             </div>
