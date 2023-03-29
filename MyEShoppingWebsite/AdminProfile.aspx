@@ -2,7 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
-
     <div class="row mt-lg-n4 mt-md-n4 justify-content-center mt-3">
         <h3 class="mt-5 text-center"><b>Admin Profile</b></h3>
         <div class="col-lg-8 col-md-10 col-sm-12 col-xs-12">
@@ -31,20 +30,15 @@
                                 <label for="name">Role</label>
                                 <input type="text" name="role" id="role" class="form-control bg-white" value="" required>
                             </div>
+                            <div class="d-grid mt-5">
+                                <button class="btn btn-sm btn-primary">Update</button>
+                            </div>
                         </form>
-                    </div>
-                </div>
-                <div class="card-footer bg-dark">
-                    <div class="col-md-12">
-                        <div class="row justify-content-center">
-                            <button class="btn btn-sm btn-primary">Update</button>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
 </asp:Content>
 
