@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="AddProduct.aspx.cs" Inherits="AddProduct" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" enableEventValidation="false"  AutoEventWireup="true" CodeFile="AddProduct.aspx.cs" Inherits="AddProduct" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
@@ -23,11 +23,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Enter Price" ForeColor="red" ControlToValidate="txtProductName"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label3" runat="server" CssClass="col control-label" Text="SellingPrice"></asp:Label>
                         <div class="col">
@@ -43,12 +41,10 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Enter Selling Brand" ForeColor="red" ControlToValidate="ddlBrand"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label5" runat="server" CssClass="col control-label" Text="Category"></asp:Label>
                         <div class="col">
@@ -63,11 +59,9 @@
                             <asp:DropDownList ID="ddlSubCategory" CssClass="form-control" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlSubCategory_SelectedIndexChanged"></asp:DropDownList>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label19" runat="server" CssClass="col control-label" Text="Gender"></asp:Label>
                         <div class="col">
@@ -82,12 +76,10 @@
                             <asp:CheckBoxList ID="cblSize" CssClass="form-control" RepeatDirection="Horizontal" runat="server"></asp:CheckBoxList>
                         </div>
                     </div>
-
                 </div>
 
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label20" runat="server" CssClass="col control-label" Text="Quantity"></asp:Label>
                         <div class="col">
@@ -103,11 +95,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Enter Description" ForeColor="red" ControlToValidate="txtDescription"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label9" runat="server" CssClass="col control-label" Text="Product Details"></asp:Label>
                         <div class="col">
@@ -124,11 +114,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Fill Up" ForeColor="red" ControlToValidate="txtMatCare"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label11" runat="server" CssClass="col control-label" Text="Upload Image-I"></asp:Label>
                         <div class="col">
@@ -144,11 +132,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Chhose Image" ForeColor="red" ControlToValidate="fuImg02"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label13" runat="server" CssClass="col control-label" Text="Upload Image-III"></asp:Label>
                         <div class="col">
@@ -164,11 +150,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Chhose Image" ForeColor="red" ControlToValidate="fuImg04"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label15" runat="server" CssClass="col control-label" Text="Upload Image-V"></asp:Label>
                         <div class="col">
@@ -176,11 +160,9 @@
                             <asp:RequiredFieldValidator runat="server" ErrorMessage="Please Chhose Image" ForeColor="red" ControlToValidate="fuImg05"></asp:RequiredFieldValidator>
                         </div>
                     </div>
-
                 </div>
 
                 <div class="row">
-
                     <div class="col">
                         <asp:Label ID="Label16" runat="server" CssClass="col control-label" Text="Free Delivery"></asp:Label>
                         <div class="col">
@@ -201,11 +183,10 @@
                             <asp:CheckBox ID="cbCOD" runat="server" />
                         </div>
                     </div>
-
                 </div>
 
                 <div class="form-group" align="center">
-                    <div class="d-grid">
+                    <div class="d-grid mt-3">
                         <asp:Button ID="btnAdd" CssClass="btn btn-danger btn-block justify-content-center" runat="server" Text="ADD Product" OnClick="btnAdd_Click" />
                     </div>
                 </div>
@@ -242,7 +223,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>

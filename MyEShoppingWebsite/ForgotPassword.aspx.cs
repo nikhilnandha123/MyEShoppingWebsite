@@ -50,12 +50,12 @@ public partial class ForgotPassword : System.Web.UI.Page
 
                 using (SmtpClient client = new SmtpClient())
                 {
-                    client.EnableSsl = true;
                     client.UseDefaultCredentials = false;
-                    client.Credentials = new NetworkCredential("kumariaditi51@gmail.com", "aditi@12345");
+                    client.Credentials = new System.Net.NetworkCredential("kumariaditi51@gmail.com", "aditi@12345");
                     client.Host = "smtp.gmail.com";
                     client.Port = 587;
                     client.DeliveryMethod = SmtpDeliveryMethod.Network;
+                    client.EnableSsl = true;
 
                     client.Send(PassRecMail);
                 }
