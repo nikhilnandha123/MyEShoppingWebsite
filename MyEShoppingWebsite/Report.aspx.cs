@@ -24,7 +24,7 @@ public partial class Report : System.Web.UI.Page
             {
                 Response.Redirect("Signin.aspx");
             }
-        } 
+        }
     }
 
     private void bindGrid1()
@@ -54,4 +54,38 @@ public partial class Report : System.Web.UI.Page
         GridView2.DataSource = dt;
         GridView2.DataBind();
     }
+
+    //protected void btnPrintReport_Click(object sender, EventArgs e)
+    //{
+    //    SqlConnection con = new SqlConnection(CS);
+    //    string qr = "select t1.OrderID,t3.Name,t2.PName,t1.Quantity as QtySell,t4.Quantity as StockOpening,t4.Quantity-t1.Quantity as Available  from tblOrderProducts as t1 inner join tblProducts as t2 on t2.PID=t1.PID inner join tblUsers as t3 on t3.Uid=t1.UserID inner join tblProductSizeQuantity as t4 on t4.PID=t1.PID";
+    //    SqlCommand cmd = new SqlCommand(qr, con);
+    //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+    //    DataTable dt = new DataTable();
+    //    da.Fill(dt);
+
+    //    // Generate the HTML for the DataTable
+    //    string html = "<table>";
+    //    foreach (DataRow row in dt.Rows)
+    //    {
+    //        html += "<tr>";
+    //        foreach (DataColumn col in dt.Columns)
+    //        {
+    //            html += "<td>" + row[col.ColumnName].ToString() + "</td>";
+    //        }
+    //        html += "</tr>";
+    //    }
+    //    html += "</table>";
+
+    //    // Send the HTML to the browser
+    //    Response.Clear();
+    //    Response.Buffer = true;
+    //    Response.ContentType = "text/html";
+    //    Response.Charset = "";
+    //    Response.Write(html);
+    //    Response.Flush();
+
+    //    // Use JavaScript to open the print dialog box
+    //    ClientScript.RegisterStartupScript(this.GetType(), "PrintOperation", "window.print();", true);
+    //}
 }

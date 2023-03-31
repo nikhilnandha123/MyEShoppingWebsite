@@ -16,20 +16,20 @@ public partial class UserHome : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         BindCartNumber22();
-        if (Session["Username"]!=null)
+        if (Session["Username"] != null)
         {
             btnlogout.Visible = true;
             btnLogin.Visible = false;
-            lblSuccess.Text = "Login Success, Welcome <b><u>" + Session["Username"].ToString()+"</u></b>";
-            Button1.Text ="Welcome: " +  Session["Username"].ToString().ToUpper()  ;
-        } 
+            lblSuccess.Text = Session["Username"].ToString();
+            Button1.Text = "Welcome: " + Session["Username"].ToString().ToUpper();
+        }
         else
         {
-            btnlogout.Visible = false; 
+            btnlogout.Visible = false;
             btnLogin.Visible = true;
             Response.Redirect("SignIn.aspx");
         }
-    }   
+    }
 
     protected void btnlogout_Click(object sender, EventArgs e)
     {
@@ -81,7 +81,7 @@ public partial class UserHome : System.Web.UI.Page
                     else
                     {
                         //_ = CartBadge.InnerText == 0.ToString();
-                        pCount.InnerText ="0";
+                        pCount.InnerText = "0";
                     }
                 }
             }

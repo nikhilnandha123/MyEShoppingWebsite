@@ -43,16 +43,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>  
 
                 </div>
             </div>
 
             <div class="d-grid">
-        <asp:Button ID="btnPrintReport" CssClass="btn-block btn btn-danger" runat="server" Text="Print" />
+                <asp:Button ID="btnPrintReport" CssClass="btn-block btn btn-danger" runat="server"  Text="Print" />
             </div>
         </div>
     </div>
 
-</asp:Content>
+</asp:Content>  
 
