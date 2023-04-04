@@ -14,7 +14,7 @@ public partial class AdminHome : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        
     }
 
     protected void btncount_Click(object sender, EventArgs e)

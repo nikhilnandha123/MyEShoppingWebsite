@@ -48,11 +48,11 @@
                 </div>
             </div>
 
-            <div class="d-grid">
-                <asp:Button ID="btnPrintReport" CssClass="btn-block btn btn-danger" runat="server"  Text="Print" />
+            <div class="d-grid  mb-3">
+                <Button ID="btnPrintReport" onclick="window.print()" Class="btn-block btn btn-danger"  Text="Print">Print</Button>
             </div>
         </div>
     </div>
 
 </asp:Content>  
-
+  

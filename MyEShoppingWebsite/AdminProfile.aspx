@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master" AutoEventWireup="true" CodeFile="AdminProfile.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AdminMasterPage.master"  enableEventValidation="false" AutoEventWireup="true" CodeFile="AdminProfile.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
 
@@ -11,23 +11,19 @@
                         <div id="msg"></div>
                         <div class="form-group">
                             <label for="name">Username</label>
-                            <asp:TextBox ID="txtusername" type="text" class="form-control bg-white" runat="server" value=""></asp:TextBox>
+                            <asp:TextBox ID="txtusername" type="text" class="form-control bg-white text-dark" runat="server" value=""></asp:TextBox>
                         </div>
                         <div class="form-group mt-2">
                             <label for="name">Password</label>
-                            <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white" runat="server" value=""></asp:TextBox>
+                            <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white text-dark" runat="server" value=""></asp:TextBox>
                         </div>
                         <div class="form-group mt-2">
                             <label for="name">Email</label>
-                            <input type="email" name="email" id="email" class="form-control bg-white" value="" required>
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control bg-white" value="" autocomplete="off">
+                            <input type="email" name="email" id="email" class="form-control bg-white text-dark" value="" required>
                         </div>
                         <div class="form-group mt-2">
                             <label for="name">Role</label>
-                            <input type="text" name="role" id="role" class="form-control bg-white" value="" required>
+                            <input type="text" name="role" id="role" class="form-control bg-white text-dark" value="" required>
                         </div>
                         <div class="d-grid mt-5">
                             <button class="btn btn-sm btn-primary">Update</button>
