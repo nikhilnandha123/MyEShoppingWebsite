@@ -28,13 +28,13 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><span>
+                    <a class="navbar-brand" href="Default.aspx"><span>
                         <img src="icons/images.png" alt="MyEShoppoing" height="30" /></span>MyEShopping </a>
                 </div>
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="Default.aspx">Home</a> </li>
+                        <%--<li><a href="Default.aspx">Home</a> </li>--%>
                         <li><a href="SignUp.aspx">SignUp</a> </li>
                         <li class="active"><a href="SignIn.aspx">SignIn</a> </li>
                     </ul>
@@ -69,13 +69,17 @@
                                 ErrorMessage="Password must be 8 characters and have both letters and numbers." />
                         </div>
                         <div class="form-group">
-                            <div style="margin: 10px;">
+                                <input type="checkbox" id="showPassword" />
+                                <label for="showPassword">Show Password</label>
+                        </div>
+                        <div class="form-group">
+                            <div>
                                 <asp:CheckBox ID="CheckBox1" runat="server" />
                                 <asp:Label ID="Label3" CssClass=" control-label " runat="server" Text="Remember me"></asp:Label>
                                 <asp:HyperLink ID="HyForgotPass" runat="server" Style="margin-left: 100px;" NavigateUrl="~/ForgotPassword.aspx"><i class="fa fa-key"></i> Forgot Password</asp:HyperLink>
                                 <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
                             </div>
-                            <div>
+                            <div style="margin-top:10px;">
                                 <asp:Button ID="btnLogin" CssClass="btn-block btn btn-success" runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
                             </div>
                         </div>
@@ -95,5 +99,20 @@
     </form>
 
 </body>
+
+<script>
+    var showPasswordCheckbox = document.getElementById("showPassword");
+    var passwordField = document.getElementById("txtPass");
+
+    showPasswordCheckbox.addEventListener("change", function () {
+        if (showPasswordCheckbox.checked) {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    });
+</script>
+
+
 </html>
 

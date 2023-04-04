@@ -11,19 +11,19 @@
                         <div id="msg"></div>
                         <div class="form-group">
                             <label for="name">Username</label>
-                            <asp:TextBox ID="txtusername" type="text" class="form-control bg-white text-dark" runat="server" value=""></asp:TextBox>
+                            <asp:TextBox ID="txtusername" type="text" class="form-control bg-white text-dark" runat="server" value="Nick John"></asp:TextBox>
                         </div>
                         <div class="form-group mt-2">
                             <label for="name">Password</label>
-                            <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white text-dark" runat="server" value=""></asp:TextBox>
+                            <asp:TextBox ID="txtpassword" type="password" class="form-control bg-white text-dark" runat="server" value="charlie777"></asp:TextBox>
                         </div>
                         <div class="form-group mt-2">
                             <label for="name">Email</label>
-                            <input type="email" name="email" id="email" class="form-control bg-white text-dark" value="" required>
+                            <input type="email" name="email" id="email" class="form-control bg-white text-dark" value="nikhil@gmail.com" required>
                         </div>
-                        <div class="form-group mt-2">
+                        <div class="form-group mt-2">   
                             <label for="name">Role</label>
-                            <input type="text" name="role" id="role" class="form-control bg-white text-dark" value="" required>
+                            <input type="text" name="role" id="role" class="form-control bg-white text-dark" value="Admin" required>
                         </div>
                         <div class="d-grid mt-5">
                             <button class="btn btn-sm btn-primary">Update</button>

@@ -82,7 +82,7 @@
                         <li class="active"><a href="Default.aspx">Home</a> </li>
                         <li><a href="About.aspx">About</a> </li>
                         <li>
-                            <button id="btnCart" class="btn btn-primary navbar-btn " type="button">
+                            <button id="btnCart" class="btn btn-primary navbar-btn " hidden type="button">
                                 Cart <span class="badge " id="pCount" runat="server"></span>
                             </button>
                         </li>
@@ -108,28 +108,28 @@
             <header class="w3-container w3-xlarge"></header>
 
             <div class="w3-display-container w3-container">
-                <img src="ImgSlider/frontpage.jpg" alt="Jeans" style="width: 100%">
+                <img src="ImgSlider/Home.jpeg" alt="Jeans" style="width: 100%">
                 <div class="w3-display-topleft w3-text-white" style="padding: 24px 48px">
-                    <h1 class="w3-jumbo w3-hide-small">New arrivals</h1>
-                    <h1 class="w3-hide-large w3-hide-medium">New arrivals</h1>
-                    <h1 class="w3-hide-small">COLLECTION 2023</h1>
+                    <h1 class="w3-jumbo w3-hide-small" style="color:black">New arrivals</h1>
+                    <h1 class="w3-hide-large w3-hide-medium" style="color:black">New arrivals</h1>
+                    <h1 class="w3-hide-small" style="color:black">COLLECTION 2023</h1>
                     <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
                 </div>
             </div>
-            <div class="panel w3-display-container w3-container" style="margin-top: 10px; color: white; background-color: black;">
-                <div class="panel-heading text-center">
+            <div class="panel w3-display-container w3-container" style="margin-top: 10px; font-size:30px; color: white;">
+                <div class="panel-heading text-center" style="background-color:black;">
                     BLACK FRIDAY DEAL
                 </div>
                 <hr />
-                <div class="panel-body">
+                <div class="panel-body" style="background-image:url(ImgSlider/la.jpg)">
                     <div class="row" style="padding-top: 50px">
                         <asp:Repeater ID="rptrProducts" runat="server">
                             <ItemTemplate>
-                                <div class="col-sm-3 col-md-3">
+                                <div class="col-sm-4 col-md-4">
                                     <a href="ProductView.aspx?PID=<%# Eval("PID") %>" style="text-decoration: none;">
                                         <div class="thumbnail">
                                             <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("ImageName") %><%# Eval("Extention") %>"
-                                                alt="<%# Eval("ImageName") %>" />
+                                                alt="<%# Eval("ImageName") %>" style="height:200px;"/>
                                             <div class="caption">
                                                 <div class="probrand">
                                                     <%# Eval ("BrandName") %>
@@ -153,7 +153,7 @@
                     </div>
                 </div>
                 <div class="panel-footer text-center" style="background-color: black; color: azure;">
-                    Buy 50 Clothes and get a gift card
+                    Buy 10 Clothes and get a gift card
                 </div>
             </div>
 
@@ -241,13 +241,13 @@
             </div>
         </div>
 
-        <footer class="navbar-fixed-bottom">
+<%--        <footer class="navbar-fixed-bottom">
             <div class="alert alert-danger ">
                 <p class="pull-right "><a href="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a><a href="AdminLogin.aspx">Admin Login  </a></p>
                 <p class="pull-right "></p>
                 <p>&copy;2022 &middot;&middot;&middot;CCS</p>
             </div>
-        </footer>
+        </footer>--%>
 
     </form>
 </body>
