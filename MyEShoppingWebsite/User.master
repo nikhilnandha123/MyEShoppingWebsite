@@ -43,7 +43,7 @@
                     </div>
                     <div class="navbar-collapse collapse">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="Default.aspx">Home</a> </li>
+                            <li><a href="UserHome.aspx">Home</a> </li>
                             <li><a href="About.aspx">About</a> </li>
                             <li><a href="Contact.aspx">Contact US</a> </li>
                             <li><a href="Products.aspx">Product</a> </li>
@@ -80,7 +80,6 @@
             <p class="pull-right "><a href="AdminLogin.aspx">Admin Login  </a></p>
             <p>&copy;2022 &middot; <a href="Default.aspx">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a> </p>
         </div>
-
     </footer>
 
     <!---Footer COntents End---->

@@ -18,7 +18,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    
+
         <div class="navbar navbar-default navbar-fixed-top " role="navigation">
             <div class="container ">
                 <div class="navbar-header">
@@ -35,45 +35,47 @@
             </div>
         </div>
 
-        <div class="container" style="margin-top:100px;">
-                <div class="form-horizontal">
-                    <div class="row">
-                        <div class="col-md-4"></div>
-                        <div class="col-md-4">
-                            <center>
-                                <img src="icons/images.png" height="50" width="50" /></center>
-                            <h2 class="text-center">ADMIN</h2>
-                            <hr />
-                            <div class="form-group">
-                                <asp:Label ID="Label1" CssClass="col control-label" runat="server" Text="UserName"></asp:Label>
-                                <div class="col">
-                                    <asp:TextBox ID="txtUsername" placeholder="UserName" CssClass="form-control" runat="server"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" CssClass="text-danger " ErrorMessage="*plz Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
-                                </div>
+        <div class="container" style="margin-top: 100px;">
+            <div class="form-horizontal">
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4">
+                        <center>
+                            <img src="icons/images.png" height="50" width="50" /></center>
+                        <h2 class="text-center">ADMIN</h2>
+                        <hr />
+                        <div class="form-group">
+                            <asp:Label ID="Label1" CssClass="col control-label" runat="server" Text="UserName"></asp:Label>
+                            <div class="col">
+                                <asp:TextBox ID="txtUsername" placeholder="UserName" CssClass="form-control" runat="server"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" CssClass="text-danger " ErrorMessage="*plz Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
-
-                            <div class="form-group">
-                                <asp:Label ID="Label2" CssClass="col control-label " runat="server" Text="Password"></asp:Label>
-                                <div class="col">
-                                    <asp:TextBox ID="txtPass" placeholder="Password" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidatorPass" CssClass="text-danger " runat="server" ErrorMessage="*the password field is required" ControlToValidate="txtPass" ForeColor="Red"></asp:RequiredFieldValidator>
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label2" CssClass="col control-label " runat="server" Text="Password"></asp:Label>
+                            <div class="col">
+                                <asp:TextBox ID="txtPass" placeholder="Password" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="RequiredFieldValidatorPass" CssClass="text-danger " runat="server" ErrorMessage="*the password field is required" ControlToValidate="txtPass" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
-
-                            <div class="form-group">
-                                <div class="col">
-                                    <asp:Button ID="btnadmin" CssClass="btn btn-success btn-block justify-content-center" runat="server" Text="Admin&raquo;" OnClick="btnadmin_Click" />
-                                </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" id="showPassword" />
+                            <label for="showPassword">Show Password</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="col">
+                                <asp:Button ID="btnadmin" CssClass="btn btn-success btn-block justify-content-center" runat="server" Text="Admin&raquo;" OnClick="btnadmin_Click" />
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4"></div>
                 </div>
+                <div class="col-md-4"></div>
             </div>
-    
+        </div>
+
     </form>
 
-        <footer class="navbar-fixed-bottom">
+    <footer class="navbar-fixed-bottom">
         <div class="alert alert-danger ">
             <p class="pull-right "><a href="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a><a href="SignIn.aspx">User Login  </a></p>
             <p class="pull-right "></p>
@@ -82,4 +84,18 @@
     </footer>
 
 </body>
+
+<script>
+    var showPasswordCheckbox = document.getElementById("showPassword");
+    var passwordField = document.getElementById("txtPass");
+
+    showPasswordCheckbox.addEventListener("change", function () {
+        if (showPasswordCheckbox.checked) {
+            passwordField.type = "text";
+        } else {
+            passwordField.type = "password";
+        }
+    });
+</script>
+
 </html>

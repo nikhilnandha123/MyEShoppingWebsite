@@ -26,15 +26,6 @@
         });
 
     </script>
-    <style>
-        .w3-sidebar a {
-            font-family: "Roboto", sans-serif
-        }
-
-        body, h1, h2, h3, h4, h5, h6, .w3-wide {
-            font-family: "Montserrat", sans-serif;
-        }
-    </style>
     <script>
         // Accordion 
         function myAccFunc() {
@@ -61,6 +52,15 @@
             document.getElementById("myOverlay").style.display = "none";
         }
     </script>
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body, h1, h2, h3, h4, h5, h6, .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
 
 </head>
 <body>
@@ -220,7 +220,6 @@
                         <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
                         <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
                     </div>
-
                 </div>
             </footer>
 

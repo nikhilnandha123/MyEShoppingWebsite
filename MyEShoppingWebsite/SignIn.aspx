@@ -35,8 +35,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <%--<li><a href="Default.aspx">Home</a> </li>--%>
+                        <li class=""><a href="AdminLogin.aspx">Admin</a> </li>
                         <li><a href="SignUp.aspx">SignUp</a> </li>
-                        <li class="active"><a href="SignIn.aspx">SignIn</a> </li>
+                        <li class=""><a href="SignIn.aspx">SignIn</a> </li>
                     </ul>
                 </div>
             </div>
@@ -50,7 +51,7 @@
                         <center>
                             <img src="icons/images.png" height="50" width="50" /></center>
                         <h2 class="center">USER</h2>
-                        <hr />
+                        <hr /> 
                         <div class="form-group">
                             <label>UserName:</label>
                             <div class="">
@@ -76,9 +77,9 @@
                             <div>
                                 <asp:CheckBox ID="CheckBox1" runat="server" />
                                 <asp:Label ID="Label3" CssClass=" control-label " runat="server" Text="Remember me"></asp:Label>
-                                <asp:HyperLink ID="HyForgotPass" runat="server" Style="margin-left: 100px;" NavigateUrl="~/ForgotPassword.aspx"><i class="fa fa-key"></i> Forgot Password</asp:HyperLink>
-                                <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
+                                <asp:HyperLink ID="HyForgotPass" runat="server" Style="margin-left: 150px;" NavigateUrl="~/ForgotPassword.aspx"><i class="fa fa-key"></i> Forgot Password</asp:HyperLink>
                             </div>
+                                <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
                             <div style="margin-top:10px;">
                                 <asp:Button ID="btnLogin" CssClass="btn-block btn btn-success" runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
                             </div>
@@ -88,13 +89,13 @@
             </div>
         </div>
 
-        <footer class="navbar-fixed-bottom">
+        <%--<footer class="navbar-fixed-bottom">
             <div class="alert alert-danger ">
                 <p class="pull-right "><a href="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a><a href="AdminLogin.aspx">Admin Login  </a></p>
                 <p class="pull-right "></p>
                 <p>&copy;2022 &middot; <a href="Default.aspx">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a></p>
             </div>
-        </footer>
+        </footer>--%>
 
     </form>
 

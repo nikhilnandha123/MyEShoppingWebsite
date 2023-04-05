@@ -9,11 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <link href="css/Custome.css" rel="stylesheet" />
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -34,9 +32,10 @@
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <%--                            <li><a href="Default.aspx">Home</a> </li>
-                            <li><a href="About.aspx">About</a> </li>--%>
-                        <li class="active"><a href="SignUp.aspx">SignUp</a> </li>
+                        <%--<li><a href="Default.aspx">Home</a> </li>
+                        <li><a href="About.aspx">About</a> </li>--%>
+                        <li class=""><a href="AdminLogin.aspx">Admin</a> </li>
+                        <li class=""><a href="SignUp.aspx">SignUp</a> </li>
                         <li><a href="SignIn.aspx">SignIn</a> </li>
                     </ul>
                 </div>
@@ -47,8 +46,8 @@
         <div class="container" style="margin-top: 100px;">
             <div class="form-horizontal">
                 <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6">
                         <center>
                             <img src="icons/images.png" height="50" width="50" /></center>
                         <h2 class="center">SIGN UP</h2>
@@ -70,11 +69,25 @@
                             </div>
                         </div>
                         <div class="row">
+                            <div class="col-lg-11">
+                                <label class="">Email:</label>
+                                <div class="">
+                                    <asp:TextBox ID="txtEmail" runat="server" Class="form-control" placeholder="Enter Your Email"></asp:TextBox>
+                                    <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
                             <div class="col-lg-5">
                                 <label class="">Password:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtPass"  runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPass" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Enter Password !!</asp:RequiredFieldValidator>
+                                    <asp:TextBox ID="txtPass" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
+                                    <asp:RegularExpressionValidator runat="server"
+                                        ControlToValidate="txtPass"
+                                        ValidationExpression="(?=.{8,})[a-zA-Z]+[^a-zA-Z]+|[^a-zA-Z]+[a-zA-Z]+"
+                                        Display="Dynamic"
+                                        ForeColor="Red"
+                                        ErrorMessage="Password must be 8 characters and have both letters and numbers." />
                                 </div>
                             </div>
                             <div class="col-lg-1">
@@ -86,17 +99,25 @@
                                 <label class="" style="float: right;">Confirm Password:</label>
                                 <div class="">
                                     <asp:TextBox ID="txtCPass" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your Confirm password"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtCPass" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Enter Confirm Password !!</asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator runat="server"
+                                        ControlToValidate="txtCPass"
+                                        ValidationExpression="(?=.{8,})[a-zA-Z]+[^a-zA-Z]+|[^a-zA-Z]+[a-zA-Z]+"
+                                        Display="Dynamic"
+                                        ForeColor="Red"
+                                        ErrorMessage="Password must be 8 characters and have both letters and numbers." />
+                                    <asp:CompareValidator ID="CompareValidator1" runat="server"
+                                        ControlToValidate="txtCPass"
+                                        CssClass="ValidationError"
+                                        ForeColor="Red"
+                                        ControlToCompare="txtPass"
+                                        ErrorMessage="Password must be the Not same"
+                                        ToolTip="Password must be the same" />
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-11">
-                                <label class="">Email:</label>
-                                <div class="">
-                                    <asp:TextBox ID="txtEmail" runat="server" Class="form-control" placeholder="Enter Your Email"></asp:TextBox>
-                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtEmail" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Enter Email !!</asp:RequiredFieldValidator>
-                                </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-lg-6">
+                                <a href="#"><input type="checkbox" />agree To Terms and Conditions</a>
                             </div>
                         </div>
                         <div class="row">
@@ -106,7 +127,6 @@
                                     <asp:Button ID="txtsignup" Class="btn btn-success btn-block" runat="server" Text="SignUP" OnClick="txtsignup_Click" />
                                     &nbsp;<asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -114,15 +134,15 @@
             </div>
         </div>
 
-        <div class="col-md-2"></div>
+        <div class="col-md-3"></div>
 
     </form>
 </body>
 
-    <script>
+<script>
     var showPasswordCheckbox = document.getElementById("showPassword");
-        var passwordField = document.getElementById("txtPass");
-        var passwordField1 = document.getElementById("txtCPass");
+    var passwordField = document.getElementById("txtPass");
+    var passwordField1 = document.getElementById("txtCPass");
 
     showPasswordCheckbox.addEventListener("change", function () {
         if (showPasswordCheckbox.checked) {
@@ -133,5 +153,5 @@
             passwordField1.type = "password";
         }
     });
-    </script>
+</script>
 </html>
