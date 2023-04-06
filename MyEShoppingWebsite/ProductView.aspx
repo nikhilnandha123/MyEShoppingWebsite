@@ -8,6 +8,7 @@
     <br />
     <br />
     <br />
+
     <button id="btnCart2" runat="server" class="btn btn-primary navbar-btn pull-right" onserverclick="btnCart2_ServerClick" type="button">
         Cart <span id="CartBadge" runat="server" class="badge">0</span>
     </button>
@@ -29,16 +30,16 @@
                         <li data-target="#carousel-example-generic" data-slide-to="2"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="3"></li>
                         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
-                    </ol>  
+                    </ol>
 
                     <div class="carousel-inner" role="listbox">
 
                         <asp:Repeater ID="rptrImage" runat="server">
-                            <ItemTemplate>
+                            <itemtemplate>
                                 <div class="item <%# GetActiveImgClass(Container.ItemIndex) %>">
                                     <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("Name") %><%# Eval("Extention") %>" alt="<%# Eval("Name") %>" onerror="this.src='Images/ImageNotAvailable.jpg'">
                                 </div>
-                            </ItemTemplate>
+                            </itemtemplate>
                         </asp:Repeater>
 
                     </div>
@@ -58,7 +59,7 @@
 
         <div class="col-md-5">
             <asp:Repeater ID="rptrProductDetails" runat="server" OnItemDataBound="rptrProductDetails_ItemDataBound">
-                <ItemTemplate>
+                <itemtemplate>
                     <div class="divDet1">
                         <h1 class="proNameView"><%# Eval("PName") %> </h1>
                         <span class="proOgPriceView">Rs.<%#Eval("PPrice","{0:c}") %></span><span class="proPriceDiscountView">Off Rs.<%# string.Format("{0}",Convert.ToInt64(Eval("PPrice"))-Convert.ToInt64(Eval("PSelPrice"))) %></span><p class="proPriceView">Rs. <%#Eval("PSelPrice","{0:c}") %></p>
@@ -100,7 +101,7 @@
                     <asp:HiddenField ID="hfGenderID" runat="server" Value='<%# Eval("PGender") %>' />
                     <asp:HiddenField ID="hfBrandID" runat="server" Value='<%# Eval("PBrandID") %>' />
 
-                </ItemTemplate>
+                </itemtemplate>
             </asp:Repeater>
         </div>
     </div>

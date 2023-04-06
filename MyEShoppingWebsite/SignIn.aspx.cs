@@ -95,7 +95,8 @@ public partial class SignIn : System.Web.UI.Page
             }
             else
             {
-                lblError.Text = "Invalid Username and password";
+                ClientScript.RegisterClientScriptBlock(this.GetType(), "K", "swal('Oops!','Your Email_Id Or Password Is Invalid','error')", true);
+                //lblError.Text = "Invalid Username and password";
             }
             //Response.Write("<script> alert('Login Successfully done');  </script>");
             clr();

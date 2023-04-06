@@ -89,4 +89,9 @@
             </div>
         </ContentTemplate>
     </asp:UpdatePanel>
+
+    <div class="row center">
+        <img src="Images/buynow.jpg"  height="200"/>
+    </div>
+
 </asp:Content>

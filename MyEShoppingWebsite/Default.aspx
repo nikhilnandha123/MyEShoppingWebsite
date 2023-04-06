@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <%--<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">--%>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -110,18 +109,18 @@
             <div class="w3-display-container w3-container">
                 <img src="ImgSlider/Home.jpeg" alt="Jeans" style="width: 100%">
                 <div class="w3-display-topleft w3-text-white" style="padding: 24px 48px">
-                    <h1 class="w3-jumbo w3-hide-small" style="color:black">New arrivals</h1>
-                    <h1 class="w3-hide-large w3-hide-medium" style="color:black">New arrivals</h1>
-                    <h1 class="w3-hide-small" style="color:black">COLLECTION 2023</h1>
+                    <h1 class="w3-jumbo w3-hide-small" style="color: black">New arrivals</h1>
+                    <h1 class="w3-hide-large w3-hide-medium" style="color: black">New arrivals</h1>
+                    <h1 class="w3-hide-small" style="color: black">COLLECTION 2023</h1>
                     <p><a href="#jeans" class="w3-button w3-black w3-padding-large w3-large">SHOP NOW</a></p>
                 </div>
             </div>
-            <div class="panel w3-display-container w3-container" style="margin-top: 10px; font-size:30px; color: white;">
-                <div class="panel-heading text-center" style="background-color:black;">
+            <div class="panel w3-display-container w3-container" style="margin-top: 10px; font-size: 30px; color: white;">
+                <div class="panel-heading text-center" style="background-color: black;">
                     BLACK FRIDAY DEAL
                 </div>
                 <hr />
-                <div class="panel-body" style="background-image:url(ImgSlider/la.jpg)">
+                <div class="panel-body" style="background-image: url(ImgSlider/la.jpg)">
                     <div class="row" style="padding-top: 50px">
                         <asp:Repeater ID="rptrProducts" runat="server">
                             <ItemTemplate>
@@ -129,7 +128,7 @@
                                     <a href="ProductView.aspx?PID=<%# Eval("PID") %>" style="text-decoration: none;">
                                         <div class="thumbnail">
                                             <img src="Images/ProductImages/<%# Eval("PID") %>/<%# Eval("ImageName") %><%# Eval("Extention") %>"
-                                                alt="<%# Eval("ImageName") %>" style="height:200px;"/>
+                                                alt="<%# Eval("ImageName") %>" style="height: 200px;" />
                                             <div class="caption">
                                                 <div class="probrand">
                                                     <%# Eval ("BrandName") %>
@@ -162,7 +161,7 @@
                 <h1>Subscribe</h1>
                 <p>To get special offers and VIP treatment:</p>
                 <p>
-                    <input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width: 100%">
+                    <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Enter e-mail" style="width: 100%">
                 </p>
                 <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
             </div>
@@ -175,18 +174,14 @@
                         <p>Questions? Go ahead.</p>
                         <form action="/action_page.php" target="_blank">
                             <p>
-                                <input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required>
-                            </p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Name" name="Name" required></p>
                             <p>
-                                <input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required>
-                            </p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Email" name="Email" required></p>
                             <p>
-                                <input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required>
-                            </p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Subject" name="Subject" required></p>
                             <p>
-                                <input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required>
-                            </p>
-                            <button type="submit" class="w3-button w3-block w3-black">Send</button>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Message" name="Message" required></p>
+                            <button type="submit" style="border-radius: 50px;" class="w3-button w3-block w3-black">Send</button>
                         </form>
                     </div>
 
@@ -240,14 +235,13 @@
             </div>
         </div>
 
-<%--        <footer class="navbar-fixed-bottom">
+        <%--<footer class="navbar-fixed-bottom">
             <div class="alert alert-danger ">
                 <p class="pull-right "><a href="#">&nbsp; &nbsp; Back to top &nbsp; &nbsp;</a><a href="AdminLogin.aspx">Admin Login  </a></p>
                 <p class="pull-right "></p>
                 <p>&copy;2022 &middot;&middot;&middot;CCS</p>
             </div>
         </footer>--%>
-
     </form>
 </body>
 </html>

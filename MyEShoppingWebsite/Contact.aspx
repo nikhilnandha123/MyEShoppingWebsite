@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/User.master" AutoEventWireup="true" CodeFile="Contact.aspx.cs" Inherits="Default2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
-
+    <title>Contact</title>
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="css/font-awesome.css" rel="stylesheet" />
 </asp:Content>
@@ -248,7 +248,7 @@
             .cta:hover .two {
                 transform: translateX(0%);
                 animation: color_anim 1s infinite 0.4s;
-            }   
+            }
         </style>
 
     </head>
@@ -311,6 +311,5 @@
 
     </body>
     </html>
-
 
 </asp:Content>

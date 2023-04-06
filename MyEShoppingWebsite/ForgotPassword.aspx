@@ -47,21 +47,21 @@
             <div class="form-horizontal">
                 <h2>Recover Password</h2>
                 <hr />
-                <h3>Please Enter Your Email Address, we will send you the recovery link for your password!</h3>
+                <h3 class="text-center text-danger">Please Enter Your Email Address, we will send you the recovery link for your password!</h3>
                  <br />
-                <div class="form-group">
-                    <asp:Label ID="lblEmail" CssClass="col-md-2 control-label" runat="server" Text="Enter Your Email Address"></asp:Label>
-                    <div class="col-md-3">
-                        <asp:TextBox ID="txtEmailID" CssClass=" form-control" runat="server"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" CssClass="Text-danger" runat="server" ErrorMessage="Enter Your Email" ControlToValidate="txtEmailID" ForeColor="Red"></asp:RequiredFieldValidator>
 
+                <div class="col-lg-4"></div>
+                <div class="form-group text-center">
+                    <div class="col-md-3">
+                    <asp:Label ID="lblEmail" CssClass="control-label" runat="server" Text="Enter Your Email Address"></asp:Label>
+                        <asp:TextBox ID="txtEmailID" CssClass="form-control" style="margin-top:10px; border-radius:50px" placeholder="Enter Your E-Mail" runat="server"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidatorEmail" CssClass="Text-danger" runat="server" ErrorMessage="Enter Your Email" ControlToValidate="txtEmailID" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
                 </div>
+             <div class="col-lg-4"></div>
                 <div class="form-group">
-                    <div class="col-md-2"></div>
-
-                    <div class="col-md-6">
-                        <asp:Button ID="btnResetPass" CssClass="btn btn-primary" runat="server" Text="Send" OnClick="btnResetPass_Click" />
+                    <div class="col-md-3 text-center">
+                        <asp:Button ID="btnResetPass" CssClass="btn btn-primary btn-block" style="border-radius:50px;" runat="server" Text="Send" OnClick="btnResetPass_Click" />
                         <asp:Label ID="lblResetPassMsg" CssClass="text-success " runat="server"></asp:Label>
                     </div>
                 </div>

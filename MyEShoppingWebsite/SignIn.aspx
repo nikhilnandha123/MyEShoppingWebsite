@@ -14,6 +14,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </head>
 <body>
 
@@ -45,23 +47,23 @@
 
         <div class="container" style="margin-top: 100px;">
             <div class="form-horizontal">
-                <div class="row">
+                <div class="row">   
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <center>
                             <img src="icons/images.png" height="50" width="50" /></center>
                         <h2 class="center">USER</h2>
-                        <hr /> 
+                        <hr />
                         <div class="form-group">
                             <label>UserName:</label>
                             <div class="">
-                                <asp:TextBox ID="txtUsername" placeholder="UserName" CssClass="form-control" runat="server"></asp:TextBox>
+                                <asp:TextBox ID="txtUsername" Style="border-radius: 50px;" placeholder="UserName" CssClass="form-control" runat="server"></asp:TextBox>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidatorUserName" runat="server" CssClass="text-danger " ErrorMessage="*plz Enter Username" ControlToValidate="txtUsername" ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Password:</label>
-                            <asp:TextBox ID="txtPass" placeholder="Password" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
+                            <asp:TextBox ID="txtPass" Style="border-radius: 50px;" placeholder="Password" CssClass="form-control" runat="server" TextMode="Password"></asp:TextBox>
                             <asp:RegularExpressionValidator runat="server"
                                 ControlToValidate="txtPass"
                                 ValidationExpression="(?=.{8,})[a-zA-Z]+[^a-zA-Z]+|[^a-zA-Z]+[a-zA-Z]+"
@@ -70,8 +72,8 @@
                                 ErrorMessage="Password must be 8 characters and have both letters and numbers." />
                         </div>
                         <div class="form-group">
-                                <input type="checkbox" id="showPassword" />
-                                <label for="showPassword">Show Password</label>
+                            <input type="checkbox" id="showPassword" />
+                            <label for="showPassword">Show Password</label>
                         </div>
                         <div class="form-group">
                             <div>
@@ -79,9 +81,9 @@
                                 <asp:Label ID="Label3" CssClass=" control-label " runat="server" Text="Remember me"></asp:Label>
                                 <asp:HyperLink ID="HyForgotPass" runat="server" Style="margin-left: 150px;" NavigateUrl="~/ForgotPassword.aspx"><i class="fa fa-key"></i> Forgot Password</asp:HyperLink>
                             </div>
-                                <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
-                            <div style="margin-top:10px;">
-                                <asp:Button ID="btnLogin" CssClass="btn-block btn btn-success" runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
+                            <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
+                            <div style="margin-top: 10px;">
+                                <asp:Button ID="btnLogin" Style="border-radius: 50px;" CssClass="btn-block btn btn-success" runat="server" Text="Login&raquo;" OnClick="btnLogin_Click" />
                             </div>
                         </div>
                     </div>
@@ -96,7 +98,6 @@
                 <p>&copy;2022 &middot; <a href="Default.aspx">Home</a>&middot;<a href="#">About</a>&middot;<a href="#">Contact</a>&middot;<a href="#">Products</a></p>
             </div>
         </footer>--%>
-
     </form>
 
 </body>
@@ -113,7 +114,6 @@
         }
     });
 </script>
-
 
 </html>
 

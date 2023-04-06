@@ -217,7 +217,6 @@
             </div>
         </div>
 
-
         <div class="container">
             <div class="img-container">
                 <img src="wwwroot/images/ceo.jpg" alt="">
@@ -234,10 +233,6 @@
                     <asp:Label ID="lblSuccess" runat="server" CssClass="text-dark"></asp:Label></h2>
             </div>
         </div>
-
-
     </form>
 </body>
 </html>
-
-
