@@ -12,12 +12,49 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+
+    <style>
+        @media only screen and (max-width: 768px) and (min-width: 320px) {
+            label {
+                float: unset !important;
+            }
+        }
+
+        @media only screen and (max-width: 768px) and (min-width: 320px) {
+            .label1 {
+                margin-top: 15px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) and (min-width: 320px) {
+            .label1 {
+                margin-top: 25px !important;
+            }
+        }
+
+        @media only screen and (max-width: 768px) and (min-width: 320px) {
+            .label2 {
+                margin-top: -24px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) and (min-width: 320px) {
+            .label2 {
+                margin-top: -24px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+    </style>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
 
         <div class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container ">
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle " data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="sr-only">Toggle navigation</span>
@@ -27,16 +64,14 @@
                     </button>
 
                     <a class="navbar-brand" href="Default.aspx"><span>
-                        <img src="icons/images.png" alt="MyEShoppoing" height="30" /></span>MyEShopping </a>
+                        <img src="icons/images.png" alt="MyEShoppoing" height="30" /></span>MyEShopping</a>
                 </div>
 
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <%--<li><a href="Default.aspx">Home</a></li>
-                        <li><a href="About.aspx">About</a> </li>--%>
-                        <li class=""><a href="AdminLogin.aspx">Admin</a> </li>
-                        <li class=""><a href="SignUp.aspx">SignUp</a> </li>
-                        <li><a href="SignIn.aspx">SignIn</a> </li>
+                        <li><a href="AdminLogin.aspx">Admin</a></li>
+                        <li><a href="SignUp.aspx">SignUp</a></li>
+                        <li><a href="SignIn.aspx">SignIn</a></li>
                     </ul>
                 </div>
             </div>
@@ -54,7 +89,7 @@
                             <div class="col-lg-5">
                                 <label class="">UserName:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtUname" style="border-radius:50px;" runat="server" Class="form-control" placeholder="Enter Your UserName"></asp:TextBox>
+                                    <asp:TextBox ID="txtUname" Style="border-radius: 50px;" runat="server" Class="form-control" placeholder="Enter Your UserName"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUname" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Enter Username !!</asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -62,7 +97,7 @@
                             <div class="col-lg-5">
                                 <label class="" style="float: right;">Your Full Name:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtName" style="border-radius:50px;" runat="server" Class="form-control" placeholder="Enter Your Name"></asp:TextBox>
+                                    <asp:TextBox ID="txtName" Style="border-radius: 50px;" runat="server" Class="form-control" placeholder="Enter Your Name"></asp:TextBox>
                                     <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtName" ErrorMessage="RequiredFieldValidator" ForeColor="Red">Enter Full-Name !!</asp:RequiredFieldValidator>
                                 </div>
                             </div>
@@ -71,7 +106,7 @@
                             <div class="col-lg-11">
                                 <label class="">Email:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtEmail" style="border-radius:50px;" runat="server" Class="form-control" placeholder="Enter Your Email"></asp:TextBox>
+                                    <asp:TextBox ID="txtEmail" Style="border-radius: 50px;" runat="server" Class="form-control" placeholder="Enter Your Email"></asp:TextBox>
                                     <asp:RegularExpressionValidator ID="regexEmailValid" runat="server" ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ForeColor="Red" ControlToValidate="txtEmail" ErrorMessage="Invalid Email Format"></asp:RegularExpressionValidator>
                                 </div>
                             </div>
@@ -80,7 +115,7 @@
                             <div class="col-lg-5">
                                 <label class="">Password:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtPass" style="border-radius:50px;" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
+                                    <asp:TextBox ID="txtPass" Style="border-radius: 50px;" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your password"></asp:TextBox>
                                     <asp:RegularExpressionValidator runat="server"
                                         ControlToValidate="txtPass"
                                         ValidationExpression="(?=.{8,})[a-zA-Z]+[^a-zA-Z]+|[^a-zA-Z]+[a-zA-Z]+"
@@ -90,14 +125,14 @@
                                 </div>
                             </div>
                             <div class="col-lg-1">
-                                <label class="">Show:</label>
-                                <center>
+                                <label class="label1">Show:</label>
+                                <center class="label2">
                                     <input type="checkbox" id="showPassword" /></center>
                             </div>
                             <div class="col-lg-5">
                                 <label class="" style="float: right;">Confirm Password:</label>
                                 <div class="">
-                                    <asp:TextBox ID="txtCPass" style="border-radius:50px;" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your Confirm password"></asp:TextBox>
+                                    <asp:TextBox ID="txtCPass" Style="border-radius: 50px;" runat="server" TextMode="Password" Class="form-control" placeholder="Enter Your Confirm password"></asp:TextBox>
                                     <asp:RegularExpressionValidator runat="server"
                                         ControlToValidate="txtCPass"
                                         ValidationExpression="(?=.{8,})[a-zA-Z]+[^a-zA-Z]+|[^a-zA-Z]+[a-zA-Z]+"
@@ -124,8 +159,8 @@
                             <div class="col-lg-11">
                                 <label class=""></label>
                                 <div class="">
-                                    <asp:Button ID="txtsignup" style="border-radius:50px;" Class="btn btn-success btn-block" runat="server" Text="SignUP" OnClick="txtsignup_Click" />
-                                    &nbsp;<asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+                                    <asp:Button ID="txtsignup" Style="border-radius: 50px;" Class="btn btn-success btn-block" runat="server" Text="SignUP" OnClick="txtsignup_Click" />
+                                    <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
                                 </div>
                             </div>
                         </div>

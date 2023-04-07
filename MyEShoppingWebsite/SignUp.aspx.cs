@@ -25,7 +25,6 @@ public partial class SignUp : System.Web.UI.Page
                 con.Open();
                 SqlCommand cmd = new SqlCommand("Insert into tblUsers(Username,Password,Email,Name,Usertype) Values('" + txtUname.Text + "','" + txtPass.Text + "','" + txtEmail.Text + "','" + txtName.Text + "','User')", con);
                 cmd.ExecuteNonQuery();
-
                 Response.Write("<script> alert('Registration Successfully done');  </script>");
                 clr();
                 con.Close();
@@ -38,7 +37,7 @@ public partial class SignUp : System.Web.UI.Page
         {
             Response.Write("<script>alert('Registration Failed')</script>");
             lblMsg.ForeColor = System.Drawing.Color.Red;
-            lblMsg.Text = "Fill Up";
+            lblMsg.Text = "Please Fill Up";
         }
     }
 
@@ -46,32 +45,31 @@ public partial class SignUp : System.Web.UI.Page
     {
         if (txtUname.Text == "")
         {
-            Response.Write("<script> alert('username not valid');  </script>");
+            Response.Write("<script> alert('username not valid');</script>");
             txtUname.Focus();
-
             return false;
         }
         else if(txtPass.Text  =="")
         {
-            Response.Write("<script> alert('Password not valid');  </script>");
+            Response.Write("<script> alert('Password not valid');</script>");
             txtPass.Focus();
             return false;
         }
         else if (txtPass.Text != txtCPass .Text )
         {
-            Response.Write("<script> alert('confirm Password not valid');  </script>");
+            Response.Write("<script> alert('confirm Password not valid');</script>");
             txtCPass.Focus();
             return false;
         }
         else if (txtEmail .Text == "")
         {
-            Response.Write("<script> alert('Email not valid');  </script>");
+            Response.Write("<script> alert('Email not valid');</script>");
             txtEmail.Focus();
             return false;
         }
         else if (txtName .Text == "")
         {
-            Response.Write("<script> alert('Name not valid');  </script>");
+            Response.Write("<script> alert('Name not valid');</script>");
             txtName.Focus();
             return false;
         }

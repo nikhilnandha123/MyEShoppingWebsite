@@ -46,15 +46,12 @@ public partial class SignIn : System.Web.UI.Page
                 {
                     Response.Cookies["UNAME"].Value = txtUsername.Text;
                     Response.Cookies["UPWD"].Value = txtPass.Text;
-       
                     Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(10);
-
                     Response.Cookies["UPWD"].Expires = DateTime.Now.AddDays(10);
                 }
                 else
                 {
                     Response.Cookies["UNAME"].Expires = DateTime.Now.AddDays(-1);
-
                     Response.Cookies["UPWD"].Expires = DateTime.Now.AddDays(-1);
                 }
 
@@ -98,7 +95,7 @@ public partial class SignIn : System.Web.UI.Page
                 ClientScript.RegisterClientScriptBlock(this.GetType(), "K", "swal('Oops!','Your Email_Id Or Password Is Invalid','error')", true);
                 //lblError.Text = "Invalid Username and password";
             }
-            //Response.Write("<script> alert('Login Successfully done');  </script>");
+            //Response.Write("<script> alert('Login Successfully done'); </script>");
             clr();
             con.Close();
             //lblMsg.Text = "Registration Successfully done";
@@ -113,3 +110,7 @@ public partial class SignIn : System.Web.UI.Page
         txtUsername.Focus();
     }
 }
+
+
+
+   

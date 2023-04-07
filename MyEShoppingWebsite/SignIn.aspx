@@ -16,9 +16,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <style>
+        @media only screen and (max-width: 1200px) and (min-width: 310px)  {
+            #HyForgotPass{
+            margin-left:80px!important;
+            }
+        }
+/*        @media only screen and (max-width: 814px) and (min-width: 310px)  {
+            #HyForgotPass{
+            margin-left:500px!important;
+            }
+        }*/
+
+    </style>    
+
 </head>
 <body>
-
+    
     <form id="form1" runat="server">
 
         <div class="navbar navbar-default navbar-fixed-top " role="navigation">
@@ -47,7 +61,7 @@
 
         <div class="container" style="margin-top: 100px;">
             <div class="form-horizontal">
-                <div class="row">   
+                <div class="row">
                     <div class="col-md-4"></div>
                     <div class="col-md-4">
                         <center>
@@ -78,7 +92,7 @@
                         <div class="form-group">
                             <div>
                                 <asp:CheckBox ID="CheckBox1" runat="server" />
-                                <asp:Label ID="Label3" CssClass=" control-label " runat="server" Text="Remember me"></asp:Label>
+                                <asp:Label ID="Label3" CssClass="control-label text-dark" runat="server" Text="Remember me"></asp:Label>
                                 <asp:HyperLink ID="HyForgotPass" runat="server" Style="margin-left: 150px;" NavigateUrl="~/ForgotPassword.aspx"><i class="fa fa-key"></i> Forgot Password</asp:HyperLink>
                             </div>
                             <asp:Label ID="lblError" CssClass="text-danger " runat="server"></asp:Label>
@@ -113,7 +127,7 @@
             passwordField.type = "password";
         }
     });
-</script>
+</script> 
 
 </html>
 

@@ -61,6 +61,29 @@
         }
     </style>
 
+    <style>
+        @media only screen and (max-width: 900px) and (min-width: 320px) {
+            .w3-button {
+                font-size: 5px !important;
+                margin-left: -19px;
+            }
+        }
+        @media only screen and (max-width: 768px) and (min-width: 449px) {
+            .w3-hide-small{
+                font-size:20px  !important;
+            }
+        }
+
+
+        @media only screen and (max-width: 900px) and (min-width: 320px) {
+            .w3-hide-large {
+                font-size: 15px !important;
+            margin-left: -19px;
+                }
+        }
+    </style>
+
+
 </head>
 <body>
     <form id="form1" runat="server">
@@ -161,9 +184,9 @@
                 <h1>Subscribe</h1>
                 <p>To get special offers and VIP treatment:</p>
                 <p>
-                    <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Enter e-mail" style="width: 100%">
+                    <input class="w3-input w3-border text-danger" style="border-radius: 50px;" type="text" placeholder="Enter e-mail" style="width: 100%">
                 </p>
-                <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+                <button type="button" style="border-radius: 50px;" class="w3-button btn-block w3-red w3-margin-bottom">Subscribe</button>
             </div>
 
             <!-- Footer -->
@@ -174,13 +197,17 @@
                         <p>Questions? Go ahead.</p>
                         <form action="/action_page.php" target="_blank">
                             <p>
-                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Name" name="Name" required></p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Name" name="Name" required>
+                            </p>
                             <p>
-                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Email" name="Email" required></p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Email" name="Email" required>
+                            </p>
                             <p>
-                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Subject" name="Subject" required></p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Subject" name="Subject" required>
+                            </p>
                             <p>
-                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Message" name="Message" required></p>
+                                <input class="w3-input w3-border" style="border-radius: 50px;" type="text" placeholder="Message" name="Message" required>
+                            </p>
                             <button type="submit" style="border-radius: 50px;" class="w3-button w3-block w3-black">Send</button>
                         </form>
                     </div>

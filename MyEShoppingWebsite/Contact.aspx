@@ -4,6 +4,9 @@
     <title>Contact</title>
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link href="css/font-awesome.css" rel="stylesheet" />
+
+
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
@@ -250,6 +253,14 @@
                 animation: color_anim 1s infinite 0.4s;
             }
         </style>
+
+            <style>
+           @media only screen and (max-width: 900px) and (min-width: 320px) {
+            .contact-box {
+                align-content:unset!important;
+            }
+        }
+    </style>
 
     </head>
     <body class="bg-dark">
